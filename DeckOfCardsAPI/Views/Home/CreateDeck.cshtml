@@ -1,0 +1,44 @@
+﻿@model DeckOfCardsAPI.Models.DeckOfCards
+
+
+
+
+<div>
+    <h4>DeckOfCards</h4>
+    <hr />
+    <dl class="row">
+        @*<dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.success)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.success)
+        </dd>*@
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.deck_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.deck_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.remaining)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.remaining)
+        </dd>
+        @*<dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.shuffled)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.shuffled)
+        </dd>*@
+    </dl>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="CardsDrawn" asp-route-id="@Model.deck_id">Draw Cards</a>
+    <br />
+</div>
+@*<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>*@

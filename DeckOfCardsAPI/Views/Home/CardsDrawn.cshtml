@@ -1,0 +1,36 @@
+﻿@model DrawnCards
+
+@{
+    ViewData["Title"] = "CardsDrawn";
+}
+
+<h1>CardsDrawn</h1>
+
+<p>
+    <a asp-action="CardsDrawn" asp-controller="Home" asp-route-id="@Model.deck_id" >Draw More</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayFor(model => model.remaining)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.cards) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.suit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.value)
+            </td>
+            <td>
+                <img src="@item.image" />
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
